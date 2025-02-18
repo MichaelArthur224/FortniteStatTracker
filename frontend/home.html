@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Fortnite Player Search</title>
+    <script defer src="search.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Fortnite Tracker</h2>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="wrapper">
+        <main class="container">
+            <h1>Fortnite Stat Tracker</h1>
+            <div class="search-container">
+                <input type="text" id="username" placeholder="Enter username">
+                <button onclick="searchUser()">Search</button>
+            </div>
+            <div id="default-message">
+                <h2>Welcome to the Fortnite Stat Tracker</h2>
+                <p>Track your stats, check out your friends' progress, and see how you stack up against the pros! 🚀</p>
+            </div>
+            <div id="results"></div>
+        </main>
+        <footer class="footer">Created By Michael</footer>
+    </div>
+
+</body>
+</html>
