@@ -65,9 +65,9 @@ def search_user():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  
-<<<<<<< HEAD
+
     app.run(host="0.0.0.0", port=port, debug=True)
-=======
+
     app.run(host="0.0.0.0", port=port, debug=True) 
->>>>>>> d06a718 (Serve home.html from frontend folder)
+    
 #python backend.py
