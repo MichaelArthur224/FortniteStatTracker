@@ -11,6 +11,10 @@ API_KEY = os.getenv("API_KEY")
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all origins
 
+@app.route("/")
+def home():
+    return send_from_directory("frontend", "home.html")
+
 @app.route("/search")
 def search_user():
     username = request.args.get("username")
