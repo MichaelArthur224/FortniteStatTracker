@@ -13,7 +13,7 @@ CORS(app)  # Enable CORS for all origins
 
 @app.route("/")
 def home():
-    return send_from_directory("frontend", "home.html")
+    return send_from_directory(os.path.join(app.root_path, 'frontend'), 'home.html')
 
 @app.route("/search")
 def search_user():
@@ -65,9 +65,5 @@ def search_user():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  
-<<<<<<< HEAD
     app.run(host="0.0.0.0", port=port, debug=True)
-=======
-    app.run(host="0.0.0.0", port=port, debug=True) 
->>>>>>> d06a718 (Serve home.html from frontend folder)
 #python backend.py
