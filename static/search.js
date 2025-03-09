@@ -11,7 +11,7 @@ async function searchUser() {
     // Hide the default message
     defaultMessage.style.display = "none";
     try {
-        const response = await fetch(`http://127.0.0.1:5000/search?username=${username}`);
+        const response = await fetch(`https://fortnitestattracker.onrender.com/search?username=${username}`);
         const data = await response.json();
 
         resultsDiv.innerHTML = ""; // Clear previous results
