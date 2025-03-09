@@ -1,19 +1,20 @@
+from flask import Flask, request, jsonify, render_template
 import asyncio
 import aiohttp
 import os
 import nest_asyncio
 from dotenv import load_dotenv  # Import dotenv
 
-# 🔄 Load environment variables from .env
+# Load environment variables from .env
 load_dotenv()
 
-# ✅ Use API key from .env
+# Use API key from .env
 API_KEY = os.getenv("API_KEY")
 
 if not API_KEY:
     raise ValueError("API_KEY is not set in the .env file or environment variables.")
 
-# 🔧 Fix event loop issue in VS Code
+# Fix event loop issue in VS Code
 nest_asyncio.apply()
 
 # List of player usernames to fetch stats for
@@ -44,7 +45,7 @@ async def main():
         for res in results:
             print(res)
 
-# ✅ Fix for Windows (VS Code & interactive environments)
+
 if __name__ == "__main__":
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
