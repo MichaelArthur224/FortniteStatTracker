@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
-app = Flask(__name__, template_folder="../frontend/templates", static_folder="../frontend")
+app = Flask(__name__, template_folder="../static/templates", static_folder="../static")
 CORS(app)  # Enable CORS for all origins
 
 @app.route("/")
