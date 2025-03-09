@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, render_template
 import requests
 from flask_cors import CORS
 import os
@@ -8,12 +8,16 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../frontend/templates", static_folder="../frontend")
 CORS(app)  # Enable CORS for all origins
 
 @app.route("/")
 def home():
-    return send_from_directory(os.path.join(app.root_path, "frontend"), "home.html")
+    return render_template("home.html")
+
+@app.route("/about.html")
+def about():
+    return render_template("about.html")
 
 @app.route("/search")
 def search_user():
