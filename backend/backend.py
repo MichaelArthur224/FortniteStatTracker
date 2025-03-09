@@ -13,7 +13,7 @@ CORS(app)  # Enable CORS for all origins
 
 @app.route("/")
 def home():
-    return send_from_directory("frontend", "home.html")
+    return send_from_directory(os.path.join(app.root_path, "frontend"), "home.html")
 
 @app.route("/search")
 def search_user():
